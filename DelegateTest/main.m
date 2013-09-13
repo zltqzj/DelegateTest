@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Me.h"
+#import "YellowCow.h"
 int main(int argc, const char * argv[])
 {
 
@@ -15,6 +16,12 @@ int main(int argc, const char * argv[])
         
         // insert code here...
         NSLog(@"Hello, World!");
+        
+        YellowCow* yello = [[YellowCow alloc] init];
+        Me * me = [[Me alloc] init];
+        me.delegate = yello;
+        [me wantATicket];
+        
         
     }
     return 0;
